@@ -1,0 +1,98 @@
+#canvas {
+    width: 100%;
+    height: 80vh;
+    border: 2px solid #4a90e2; /* Blue border for emphasis */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background: #f9f9f9; /* Light background color */
+    position: relative; /* Ensure proper positioning for elements inside */
+    overflow: hidden; /* Hide anything that goes outside the canvas */
+    margin: 20px auto; /* Center the canvas with margin */
+}
+#canvas .dmn-js {
+    border: none; /* Remove default borders if any */
+    background-color: transparent; /* Ensure the background is transparent */
+}
+
+/* Optional: Style for internal elements, if you need */
+#canvas .dmn-js .some-internal-class {
+    /* Example of internal styling, adjust based on actual classes used */
+    stroke: #333; /* Example of setting stroke color */
+    fill: #e0e0e0; /* Example of setting fill color */
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#controls button, #controls input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#controls button {
+    background-color: #4a90e2; 
+    color: white;
+}
+
+#controls button:hover {
+    background-color: #357ABD; 
+}
+
+#controls input[type="file"] {
+    background-color: #e0e0e0; 
+    color: #333;
+}
+
+#controls input[type="file"]::file-selector-button {
+    background-color: #4a90e2; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#controls input[type="file"]::file-selector-button:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+}
+/* General styling for tables inside the canvas */
+#canvas .dmn-js .table {
+border-collapse: collapse;
+width: 100%;
+background: #fff;
+}
+
+#canvas .dmn-js .table th,
+#canvas .dmn-js .table td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: left;
+}
+
+#canvas .dmn-js .table th {
+background-color: #f4f4f4;
+color: #333;
+font-weight: bold;
+}
+
+#canvas .dmn-js .table tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+#canvas .dmn-js .table tr:hover {
+background-color: #e0e0e0;
+}
+
+/* Additional styling for specific internal elements, if needed */
+#canvas .dmn-js .table .some-specific-class {
+/* Example of specific internal styling */
+color: #666;
+font-size: 14px;
+}
