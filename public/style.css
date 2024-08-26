@@ -1,4 +1,9 @@
+/* Canvas Styling */
+body{
+    background-color: #333;
+}
 #canvas {
+   
     width: 100%;
     height: 80vh;
     border: 2px solid #4a90e2; /* Blue border for emphasis */
@@ -9,6 +14,11 @@
     overflow: hidden; /* Hide anything that goes outside the canvas */
     margin: 20px auto; /* Center the canvas with margin */
 }
+.dmn-drd-container{
+    height: 100%;
+}
+
+/* Styling for DMN internal elements */
 #canvas .dmn-js {
     border: none; /* Remove default borders if any */
     background-color: transparent; /* Ensure the background is transparent */
@@ -21,6 +31,42 @@
     fill: #e0e0e0; /* Example of setting fill color */
 }
 
+/* Table Styling inside canvas */
+#canvas .dmn-js .table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+}
+
+#canvas .dmn-js .table th,
+#canvas .dmn-js .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#canvas .dmn-js .table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+#canvas .dmn-js .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#canvas .dmn-js .table tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Additional styling for specific internal elements, if needed */
+#canvas .dmn-js .table .some-specific-class {
+    /* Example of specific internal styling */
+    color: #666;
+    font-size: 14px;
+}
+
+/* Controls Styling */
 #controls {
     display: flex;
     justify-content: center;
@@ -62,37 +108,162 @@
 #controls input[type="file"]::file-selector-button:hover {
     background-color: #357ABD; /* Darker blue on hover */
 }
-/* General styling for tables inside the canvas */
-#canvas .dmn-js .table {
-border-collapse: collapse;
-width: 100%;
-background: #fff;
+
+
+
+
+
+
+/* Basic reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#canvas .dmn-js .table th,
-#canvas .dmn-js .table td {
-border: 1px solid #ddd;
-padding: 8px;
-text-align: left;
+/* Container for DMN components */
+.dmn-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-#canvas .dmn-js .table th {
-background-color: #f4f4f4;
-color: #333;
-font-weight: bold;
+/* Styling for the decision table */
+.dmn-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-#canvas .dmn-js .table tr:nth-child(even) {
-background-color: #f9f9f9;
+.dmn-table th, .dmn-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
 }
 
-#canvas .dmn-js .table tr:hover {
-background-color: #e0e0e0;
+.dmn-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
 }
 
-/* Additional styling for specific internal elements, if needed */
-#canvas .dmn-js .table .some-specific-class {
-/* Example of specific internal styling */
-color: #666;
-font-size: 14px;
+.dmn-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.dmn-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+/* table  */
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes space between borders */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+thead {
+    background-color: #4CAF50; /* Darker background for header */
+    color: white; /* Text color for header */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    font-weight: bold; /* Bold text for headers */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+tbody tr:hover {
+    background-color: #ddd; /* Highlight row on hover */
+}
+
+/* Optional responsive design */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Make table elements block to stack vertically */
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        white-space: nowrap;
+    }
+
+    td:before {
+        content: attr(data-label); /* Use data-label for table headings */
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+
+/* canvas  buttons */
+
+
+/* General Button Styles inside #canvas */
+#canvas button {
+    background-color: #000000; /* Green background */
+    color: rgb(255, 255, 255); /* White text */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Button Hover Styles */
+#canvas button:hover {
+    background-color: #ed0505; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Button Focus Styles */
+#canvas button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.5); /* Custom focus ring */
+}
+
+/* Button Disabled Styles */
+#canvas button:disabled {
+    background-color: #ccc; /* Light gray background */
+    color: #666; /* Darker gray text */
+    cursor: not-allowed; /* Not-allowed cursor */
+    box-shadow: none; /* Remove shadow */
+}
+
+/* Button Icon Styles (if buttons contain icons) */
+#canvas button .dmn-icon {
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon with text */
 }
