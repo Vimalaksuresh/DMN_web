@@ -232,8 +232,8 @@ tbody tr:hover {
 
 /* General Button Styles inside #canvas */
 #canvas button {
-    background-color: #000000; /* Green background */
-    color: rgb(255, 255, 255); /* White text */
+    background-color: #2f0606; /* Green background */
+    color: white; /* White text */
     border: none; /* Remove default border */
     border-radius: 4px; /* Rounded corners */
     padding: 10px 20px; /* Padding inside the button */
